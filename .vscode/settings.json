@@ -1,0 +1,25 @@
+{
+  "autoRestart.fileGlobForESLint": [
+    "**/.eslintrc.{js,cjs,mjs,yaml,yml,json}",
+    "**/eslint.config.{js,cjs,mjs}",
+    "**/utilities/eslint/*.{js,cjs,mjs}"
+  ],
+  "files.exclude": {
+    "**/.DS_Store": false,
+    "**/.git": false,
+    "**/.gitignore": false,
+    "**/.hg": false,
+    "**/.prettierignore": false,
+    "**/.ruby-lsp": false,
+    "**/.svn": false,
+    "**/CVS": false,
+    "**/eslint.config.js": false,
+    "**/node_modules": false,
+    "**/package.json": false,
+    "**/pnpm-lock.yaml": false,
+    "**/prettier.config.js": false,
+    "**/target": false,
+    "**/Thumbs.db": false,
+    "**/tsconfig.json": false
+  }
+}

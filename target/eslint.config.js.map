@@ -1,0 +1,1 @@
+{"version":3,"file":"eslint.config.js","sourceRoot":"","sources":["../eslint.config.js"],"names":[],"mappings":"AAAA,cAAc;AACd,OAAO,iBAAiB,MAAM,kCAAkC,CAAC;AACjE,OAAO,iBAAiB,MAAM,kCAAkC,CAAC;AAEjE,+CAA+C;AAC/C,eAAe;IACb;QACE,OAAO,EAAE,CAAC,MAAM,EAAE,cAAc,CAAC;KAClC;IACD,iBAAiB;IACjB,iBAAiB;CAClB,CAAC"}
