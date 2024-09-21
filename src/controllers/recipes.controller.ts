@@ -48,6 +48,10 @@ export default class RecipesController {
     response: Response,
     _next: NextFunction,
   ) => {
-    return response.json(this.data[0]);
+    return response.json(
+      this.data.find((predicate) => {
+        return predicate.title === "Simple Omelette Recipe";
+      }),
+    );
   };
 }

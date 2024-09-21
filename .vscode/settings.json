@@ -1,25 +1,20 @@
 {
-  "autoRestart.fileGlobForESLint": [
-    "**/.eslintrc.{js,cjs,mjs,yaml,yml,json}",
-    "**/eslint.config.{js,cjs,mjs}",
-    "**/utilities/eslint/*.{js,cjs,mjs}"
-  ],
   "files.exclude": {
-    "**/.DS_Store": false,
-    "**/.git": false,
-    "**/.gitignore": false,
-    "**/.hg": false,
-    "**/.prettierignore": false,
-    "**/.ruby-lsp": false,
-    "**/.svn": false,
-    "**/CVS": false,
-    "**/eslint.config.js": false,
-    "**/node_modules": false,
-    "**/package.json": false,
-    "**/pnpm-lock.yaml": false,
-    "**/prettier.config.js": false,
-    "**/target": false,
-    "**/Thumbs.db": false,
-    "**/tsconfig.json": false
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.hg": true,
+    "**/.prettierignore": true,
+    "**/.ruby-lsp": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/eslint.config.js": true,
+    "**/node_modules": true,
+    "**/package.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/prettier.config.js": true,
+    "**/target": true,
+    "**/Thumbs.db": true,
+    "**/tsconfig.json": true
   }
 }

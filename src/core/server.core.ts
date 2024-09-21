@@ -4,21 +4,33 @@ import { recipesRouter } from "../routes/recipes.route.js";
 
 export default class Server {
   private readonly application!: express.Application;
-  private readonly callback!: () => void;
-  private readonly hostname!: string;
-  private readonly port!: number;
+  private readonly callback!: (() => void) | null;
+  private hostname!: string | null;
+  private port!: number | null;
 
-  public constructor(hostname: string, port: number, callback?: () => void) {
+  public constructor() {
     this.application = express();
+  }
 
+  public setHostname(hostname: string): void {
     this.hostname = hostname;
-    this.port = port;
+  }
 
-    this.callback =
-      callback ??
-      (() => {
-        console.info(`Listening @ ${this.hostname}:${this.port}`);
-      });
+  public setPort(port: number): void {
+    this.port = port;
+  }
+
+  public start(): void {
+    this.loadMiddleware();
+    this.loadRoutes();
+    this.application.listen(
+      this.port ?? 3000,
+      this.hostname ?? "127.0.0.1",
+      this.callback ??
+        (() => {
+          console.info("Running server @ ", this.hostname, this.port);
+        }),
+    );
   }
 
   private loadMiddleware(): void {
@@ -28,12 +40,5 @@ export default class Server {
 
   private loadRoutes(): void {
     this.application.use(recipesRouter);
-  }
-
-  public start(): void {
-    this.loadMiddleware();
-    this.loadRoutes();
-
-    this.application.listen(this.port, this.hostname, this.callback);
   }
 }
